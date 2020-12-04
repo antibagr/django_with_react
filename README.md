@@ -1,1 +1,1 @@
-** Making first steps into magic of fullstack development **
+**Making first steps into magic of fullstack development**
