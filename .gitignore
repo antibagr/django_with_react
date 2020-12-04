@@ -1,5 +1,5 @@
 #static database-related files
-
+migrations
 *.pyo
 db.db
 *.json
