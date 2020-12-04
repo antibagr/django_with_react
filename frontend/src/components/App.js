@@ -9,10 +9,13 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        <HomePage />
-      </div>
-    );
+      <h1>Testing yeah</h1>
+    )
+    // (
+    //   <div>
+    //     <HomePage />
+    //   </div>
+    // );
   }
 }
 
