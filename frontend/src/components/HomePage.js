@@ -25,6 +25,6 @@ export default class HomePage extends Component {
           <Route path="/create" component={CreateRoomPage} />
         </Switch>
       </Router>
-    );
+    )
   }
 }
