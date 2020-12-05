@@ -11,7 +11,6 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <p>Still there!</p>
         <HomePage />
       </div>
     );

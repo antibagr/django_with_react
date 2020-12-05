@@ -1,3 +1,6 @@
+from django.middleware.csrf import CsrfViewMiddleware
+
+
 import rest_framework
 from rest_framework import generics, status as rest_framework_status
 from rest_framework.views import APIView
@@ -6,6 +9,7 @@ from rest_framework.response import Response
 
 from .serializers import RoomSerializer, CreateRoomSerializer
 from .models import Room
+
 
 
 class RoomView(generics.ListAPIView):
@@ -24,8 +28,10 @@ class CreateRoomView(APIView):
         """
         Create new room or update existing one
         """
+        # csrf_validation_failed: bool = CsrfViewMiddleware().process_view(request, None, (), {})
+        session_does_not_exists: bool = not self.request.session.exists(self.request.session.session_key)
 
-        if not self.request.session.exists(self.request.session.session_key):
+        if session_does_not_exists:
             print("Create new session key")
 
             # User has no active session
